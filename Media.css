@@ -1,0 +1,59 @@
+/* min width --> if your are doing mobile first design */
+/* max-width --> if you are doing desktop first */
+
+.flex{
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap: 4px;
+flex-wrap: wrap;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+h1{
+    color: blue;
+}
+
+h1::after{
+    content: "-->Destop";
+}
+
+/* Media Query */
+
+/* Media type -- print, screen, all */
+
+/* first find break point for browser */
+
+/* When doing desktop first go from higher size to lower(max-width) */
+/* @media screen and (max-width: 450px){
+    h1{
+        color: brown;
+    }
+} */
+
+/* ipad break point */
+
+@media screen and (max-width: 800px){
+     h1{
+        color: green;
+    }
+    h1::after{
+    content: "-->ipad";
+}
+}
+
+/* iphone breakpoint - 390px */
+@media screen and (max-width: 390px){
+       h1{
+        color: gold;
+    }
+
+    h1::after{
+    content: "-->iphone";
+}
+}
